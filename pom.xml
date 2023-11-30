@@ -11,8 +11,13 @@
     <groupId>uekat.katowice</groupId>
     <artifactId>fraud-checker</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>fraud-checker</name>
     <description>fraud-checker</description>
+    <modules>
+        <module>customer</module>
+        <module>customer</module>
+    </modules>
     <properties>
         <java.version>17</java.version>
     </properties>
