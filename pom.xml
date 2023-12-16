@@ -15,6 +15,9 @@
     <name>fraud-checker</name>
     <description>fraud-checker</description>
     <modules>
+        <module>fraud</module>
+    </modules>
+    <modules>
         <module>api-gateway</module>
     </modules>
     <properties>
