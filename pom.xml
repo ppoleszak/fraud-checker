@@ -17,6 +17,9 @@
     <modules>
         <module>fraud</module>
     </modules>
+    <modules>
+        <module>api-gateway</module>
+    </modules>
     <properties>
         <java.version>17</java.version>
     </properties>
