@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer
+  labels:
+    app: customer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customer
+  template:
+    metadata:
+      name: customer
+      labels:
+        app: customer
+    spec:
+      containers:
+        - name: customer
+          image: poleszak/customer
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: kube
+            - name: SPRING_DATASOURCE_USERNAME
+              value: linpostgres
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://lin-19170-6664-pgsql-primary.servers.linodedb.net:5432/customer
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: 3Xr9+YpyxvKZP8ye
+      restartPolicy: Always
